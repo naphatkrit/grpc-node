@@ -700,7 +700,7 @@ async function writeAllFiles(protoFiles: string[], options: GeneratorOptions) {
   }
   for (const [basename, filenames] of basenameMap.entries()) {
     const loadedRoot = await loadProtosWithOptions(filenames, options);
-    writeFilesForRoot(loadedRoot, basename, options);
+    writeFilesForRoot(loadedRoot, "index.ts", options);
   }
 }
 
